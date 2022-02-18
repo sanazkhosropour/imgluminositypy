@@ -21,6 +21,6 @@ image1 = lab2rgb(image1)
 
 # plot input and output image 
 
-plt.figure(figsize(20,10))
-plt.subplot(121), plt.imshow(image1) , plt.axis('off'), plt.title('gray space' , size = 20)
+plt.figure(figsize(50,50))
+plt.subplot(121), plt.imshow(image1) , plt.axis('off'), plt.title('gray space' , size = 50)
 plt.show()
