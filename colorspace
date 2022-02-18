@@ -1,0 +1,26 @@
+# lightness RGB into Lab color space
+import numpy as np
+from skimage.io import imread
+from skimage.color import rgb2lab, lab2rgb
+import matplotlib.pyplot as plt
+
+# RGB color into grayscale by setting lab space to zero
+# image input
+image = imread('C:/Users/sanaz/Desktop/saya.jpg')
+
+# color space transformation
+image1 = rgb2lab(image)
+
+# set the color channel to zero
+image1[...,1] = image1[...,2] = 0
+
+# converting back image to RGB
+image1 = lab2rgb(image1)
+
+
+
+# plot input and output image 
+
+plt.figure(figsize(20,10))
+plt.subplot(121), plt.imshow(image1) , plt.axis('off'), plt.title('gray space' , size = 20)
+plt.show()
